@@ -1,0 +1,19 @@
+class ArticlesController <ApplicationController
+  def new
+    @article = Article.new
+  end
+  
+  def create
+    #render plain: params[:article].inspect #displays
+    @article = Article.new(article_params)
+    @article.save
+    redirect_to articles_show(@article)
+  end  
+  
+  private
+    def article_params
+      params.required(:article).permit( :title, :description)
+    end
+    
+ 
+end

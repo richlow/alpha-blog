@@ -3,3 +3,6 @@
   <%= link_to 'Sign up now', "#", class: "btn btn-danger btn-lg btn-xlarge" %>
 
 </div>
+
+
+<%= link_to 'about', about_path %>
